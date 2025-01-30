@@ -1,12 +1,16 @@
-import React from 'react';
-import { useParallaxTilt } from '../hooks/useParallaxTilt';
+import React from "react";
+import { useParallaxTilt } from "../hooks/useParallaxTilt";
 
 interface ParallaxCardProps {
   children: React.ReactNode;
   className?: string;
+  style?: React.CSSProperties;
 }
 
-export const ParallaxCard: React.FC<ParallaxCardProps> = ({ children, className = '' }) => {
+export const ParallaxCard: React.FC<ParallaxCardProps> = ({
+  children,
+  className = "",
+}) => {
   const { tiltEventHandlers, style } = useParallaxTilt();
 
   return (

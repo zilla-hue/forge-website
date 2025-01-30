@@ -1,83 +1,53 @@
-import {
-  Megaphone, Palette, Globe, MessageSquare, 
-  Users, Briefcase, Radio, Video, Printer,
-  Music, Camera, Speaker, Monitor
-} from 'lucide-react';
+import { Palette, Globe, Camera, LucideIcon, Radio } from "lucide-react";
 
-export const services = [
+interface ServiceCategory {
+  title: string;
+  services: string[];
+  description: string;
+  icon?: LucideIcon;
+}
+
+export const serviceCategories: ServiceCategory[] = [
   {
-    icon: Monitor,
-    title: 'Outdoor Advertising',
-    description: 'Strategic placement and design of impactful outdoor media campaigns across digital and traditional platforms.'
-  },
-  {
-    icon: Globe,
-    title: 'Media Marketing',
-    description: 'Comprehensive media marketing solutions that drive engagement and deliver measurable results.'
-  },
-  {
-    icon: Users,
-    title: 'Media Management',
-    description: 'Expert management of media assets and campaigns across multiple channels and platforms.'
-  },
-  {
-    icon: Megaphone,
-    title: 'Digital Marketing',
-    description: 'Data-driven digital marketing strategies that connect brands with their target audience.'
-  },
-  {
-    icon: MessageSquare,
-    title: 'Content Creation',
-    description: 'Creative content development that tells your brand story and engages your audience.'
-  },
-  {
-    icon: Briefcase,
-    title: 'Perception Management',
-    description: 'Strategic management of brand perception and reputation in the digital age.'
-  },
-  {
-    icon: Users,
-    title: 'Personality Profiling',
-    description: 'In-depth analysis and development of personal and corporate brand identities.'
+    icon: Radio,
+    title: "Media Mastery",
+    services: ["Media Marketing", "Media Management", "Digital Campaigns"],
+    description:
+      "Amplify your message across TV, radio, digital, and social—all optimized for maximum reach.",
   },
   {
     icon: Palette,
-    title: 'Brand Strategy',
-    description: 'Comprehensive brand development and positioning strategies for market success.'
+    title: "Brand Strategy",
+    services: [
+      "Perception Management",
+      "Personality Profiling",
+      "Content Creation",
+    ],
+    description:
+      "Shape how the world sees you—craft a unique identity that stands the test of time.",
   },
   {
     icon: Globe,
-    title: 'Public Relations',
-    description: 'Strategic PR campaigns that build and maintain positive relationships with stakeholders.'
+    title: "Creative Production",
+    services: [
+      "Video & Film",
+      "Radio & TV Ads",
+      "Music & Audio Engineering",
+      "Visual Arts",
+    ],
+    description:
+      "Compelling visuals and soundtracks that captivate audiences and elevate storytelling.",
   },
   {
     icon: Camera,
-    title: 'Visual Arts',
-    description: 'Creative visual solutions that capture attention and communicate your message effectively.'
+    title: "Traditional & Digital Impact",
+    services: [
+      "Outdoor Advertising",
+      "Publication & Print",
+      "Merchandise",
+      "SEO & PPC",
+    ],
+    description:
+      "Billboards that stop traffic. Print materials that inspire action. Digital campaigns that dominate.",
   },
-  {
-    icon: Video,
-    title: 'Video & Film Production',
-    description: 'Professional video and film production services for all your visual storytelling needs.'
-  },
-  {
-    icon: Radio,
-    title: 'Radio & TV Production',
-    description: 'End-to-end production services for radio and television content.'
-  },
-  {
-    icon: Printer,
-    title: 'Publication & Printing',
-    description: 'High-quality publication and printing services for all your marketing materials.'
-  },
-  {
-    icon: Speaker,
-    title: 'Audio Engineering',
-    description: 'Professional audio production and engineering services for various media formats.'
-  },
-  {
-    icon: Music,
-    title: 'Music Production',
-    description: 'Complete music production services from composition to final mastering.'
-  }
 ];
