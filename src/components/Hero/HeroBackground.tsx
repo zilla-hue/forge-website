@@ -1,4 +1,4 @@
-import forgeVideo from "/assets/videos/forge-hero-1.mp4";
+import forgeVideo from "/assets/videos/forge-hero-video.mp4";
 
 const HeroBackground = () => {
   return (
