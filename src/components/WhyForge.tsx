@@ -14,17 +14,17 @@ interface FeatureCardProps {
 
 const FeatureCard = ({ title, description, icon }: FeatureCardProps) => {
   return (
-    <ParallaxCard className="group bg-[#171717] text-white h-full transition-all duration-300 hover:bg-[#FF0006]/10">
-      <CardHeader className="flex flex-row items-center gap-4">
-        <div className="p-2 rounded-lg bg-[#FF0006]/10 text-[#FF0006] group-hover:bg-[#FF0006]/20 transition-colors duration-300">
+    <ParallaxCard className="group bg-black/20 backdrop-blur-sm border border-[#FF0006]/20 hover:border-[#FF0006]/40 transition-all duration-500 rounded-2xl">
+      <CardHeader className="flex flex-row items-center gap-6 p-8">
+        <div className="p-4 rounded-xl bg-[#FF0006]/10 text-[#FF0006] group-hover:bg-[#FF0006]/20 transition-all duration-300">
           {icon}
         </div>
-        <CardTitle className="text-xl font-semibold group-hover:scale-105 transition-transform duration-300">
+        <CardTitle className="text-2xl font-bold text-white group-hover:text-[#FF0006] transition-colors duration-300">
           {title}
         </CardTitle>
       </CardHeader>
-      <CardContent>
-        <p className="text-gray-300 group-hover:text-white transition-colors duration-300">
+      <CardContent className="px-8 pb-8">
+        <p className="text-lg text-secondary-light/90 group-hover:text-white transition-colors duration-300 leading-relaxed">
           {description}
         </p>
       </CardContent>
@@ -65,21 +65,21 @@ export default function WhyForge() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-[#171717] py-20 overflow-hidden"
+      className="relative bg-[#171717] py-32 overflow-hidden"
     >
-      <div className="absolute inset-0 bg-gradient-to-br from-[#FF0006]/5 via-transparent to-transparent opacity-50" />
-      <div className="container relative mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FF0006]/10 via-transparent to-transparent opacity-50" />
+      <div className="container relative mx-auto px-6">
+        <div className="text-center mb-16">
+          <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
             The Forge Difference
           </h2>
-          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+          <p className="text-xl text-secondary-light/90 max-w-3xl mx-auto leading-relaxed">
             Experience the power of strategic creativity and data-driven
             innovation that sets us apart in the industry.
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-12">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4 mb-16">
           {features.map((feature, index) => (
             <FeatureCard
               key={index}
@@ -94,7 +94,7 @@ export default function WhyForge() {
           <Link to="/about">
             <Button
               size="lg"
-              className="bg-[#FF0006] text-white hover:bg-[#FF0006]/90 transition-colors duration-300"
+              className="bg-[#FF0006] text-white hover:bg-[#FF0006]/90 transition-all duration-300 text-lg h-14 px-10 rounded-xl hover:scale-105"
             >
               Learn More
             </Button>

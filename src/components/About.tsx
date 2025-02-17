@@ -87,20 +87,24 @@ export default function About() {
         </div>
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <AboutCard title="Focus">
-            Precision-driven strategies that hit your goals, ensuring every
-            campaign delivers measurable results and lasting impact.
+            Emphasizing the importance of clear goals and direction in
+            advertising strategies, we are driven and attentive, ensuring that
+            each project receives our full commitment to meet our clients&apos;
+            goals with precision.
           </AboutCard>
           <AboutCard title="Creativity">
-            Bold ideas that break the mold, pushing boundaries to create unique
-            and memorable brand experiences that captivate audiences.
+            Our team thrives on original ideas, embracing change, and bringing
+            fresh perspectives that set our clients apart in a fast evolving and
+            crowded media landscape.
           </AboutCard>
           <AboutCard title="Collaboration">
-            Your vision + our expertise = unstoppable results. We work closely
-            with clients to transform ideas into powerful realities.
+            Working in unison, we foster a collaborative environment that values
+            each team member&apos;s input, harmony of ideas, and handshake with
+            other dealers and stakeholders in the industry.
           </AboutCard>
           <AboutCard title="Excellence">
-            Every pixel, word, and second crafted to perfection, maintaining the
-            highest standards in everything we deliver.
+            We aim for the highest quality in everything we do, upholding
+            standards that reflect our dedication to a collective success.
           </AboutCard>
         </div>
       </div>

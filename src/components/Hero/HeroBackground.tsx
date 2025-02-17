@@ -1,14 +1,37 @@
+import { useEffect, useRef } from "react";
 import forgeVideo from "/assets/videos/forge-hero-video.mp4";
 
 const HeroBackground = () => {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Optimize video loading
+    video.preload = "metadata";
+
+    // Handle video loading and playback
+    const handleLoadedData = () => {
+      video.play().catch(() => {
+        console.log("Autoplay blocked");
+      });
+    };
+
+    video.addEventListener("loadeddata", handleLoadedData);
+    return () => video.removeEventListener("loadeddata", handleLoadedData);
+  }, []);
+
   return (
     <>
       <video
+        ref={videoRef}
         autoPlay
         muted
         loop
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover transform-gpu"
+        poster="/assets/images/forge-hero-poster.jpg"
       >
         <source src={forgeVideo} type="video/mp4" />
       </video>

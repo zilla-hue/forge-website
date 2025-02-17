@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, CheckCircle } from "lucide-react";
 import { serviceCategories } from "../components/Services/serviceData";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ServicesPage = () => {
   const scrollToSection = (id: string) => {
@@ -22,65 +23,59 @@ const ServicesPage = () => {
 
   return (
     <main className="min-h-screen bg-secondary">
-      {/* Hero Section */}
-      <section className="relative py-24 overflow-hidden">
+      {/* Enhanced Hero Section */}
+      <section className="relative py-32 lg:py-40 overflow-hidden">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-5xl md:text-6xl font-bold mb-6 animate-fade-in bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-6xl md:text-7xl font-bold mb-8 animate-fade-in bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
               Transform Your Brand
             </h2>
-            <p className="text-xl text-secondary-light/80 mb-8 animate-fade-in delay-200">
+            <p className="text-xl md:text-2xl text-secondary-light/90 mb-8 animate-fade-in delay-200 leading-relaxed">
               Comprehensive digital solutions tailored to your unique business
               needs.
             </p>
           </div>
         </div>
+        <div className="absolute top-0 left-0 w-full h-full opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FF0006] via-transparent to-transparent" />
       </section>
 
-      {/* Detailed Service Categories */}
-      <section className="py-20 bg-[#1a1a1a]">
+      {/* Enhanced Service Categories */}
+      <section className="py-24 bg-[#1a1a1a]">
         <div className="container mx-auto px-6">
-          {serviceCategories.map(
-            (
-              category: {
-                title: string;
-                description: string;
-                services: string[];
-              },
-              index: number
-            ) => (
-              <div
-                key={index}
-                id={category.title.toLowerCase().replace(/ /g, "-")}
-                className="mb-16 last:mb-0"
-              >
-                <div className="flex flex-col md:flex-row items-center mb-8">
-                  <div className="md:w-1/2 mb-6 md:mb-0 md:pr-8">
-                    <h3 className="text-3xl font-bold text-white mb-4">
-                      {category.title}
-                    </h3>
-                    <p className="text-secondary-light/80 mb-6">
-                      {category.description}
-                    </p>
-                    <ul className="grid grid-cols-1 md:grid-cols-2 gap-2">
-                      {category.services.map((service, idx) => (
-                        <li key={idx} className="flex items-center text-white">
-                          <CheckCircle
-                            className="text-[#FF0006] mr-2"
-                            size={16}
-                          />
-                          {service}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  <div className="md:w-1/2">
+          {serviceCategories.map((category, index) => (
+            <div
+              key={index}
+              id={category.title.toLowerCase().replace(/ /g, "-")}
+              className="mb-24 last:mb-0 scroll-mt-24"
+            >
+              <div className="flex flex-col lg:flex-row items-center gap-12">
+                <div className="lg:w-1/2">
+                  <h3 className="text-4xl font-bold text-white mb-6">
+                    {category.title}
+                  </h3>
+                  <p className="text-lg text-secondary-light/90 mb-8 leading-relaxed">
+                    {category.description}
+                  </p>
+                  <ul className="grid sm:grid-cols-2 gap-4">
+                    {category.services.map((service, idx) => (
+                      <li
+                        key={idx}
+                        className="flex items-center text-white text-lg"
+                      >
+                        <CheckCircle className="text-[#FF0006] mr-3 h-5 w-5" />
+                        <span className="leading-relaxed">{service}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="lg:w-1/2">
+                  <div className="rounded-2xl overflow-hidden border border-[#FF0006]/20 shadow-lg shadow-[#FF0006]/5">
                     <img
                       src={`/images/${category.title
                         .toLowerCase()
                         .replace(/ /g, "-")}.png`}
                       alt={category.title}
-                      className="rounded-lg shadow-lg w-full h-auto"
+                      className="w-full h-auto transform hover:scale-105 transition-transform duration-500"
                       loading="lazy"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement;
@@ -90,8 +85,8 @@ const ServicesPage = () => {
                   </div>
                 </div>
               </div>
-            )
-          )}
+            </div>
+          ))}
         </div>
       </section>
 
@@ -108,13 +103,15 @@ const ServicesPage = () => {
                 perfectly align with your business objectives and market
                 requirements.
               </p>
-              <Button
-                className="group bg-[#FF0006] hover:bg-[#FF0006]/90 text-white"
-                size="lg"
-              >
-                <span>Get Custom Quote</span>
-                <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
-              </Button>
+              <Link to="/contact">
+                <Button
+                  className="group bg-[#FF0006] hover:bg-[#FF0006]/90 text-white"
+                  size="lg"
+                >
+                  <span>Get Custom Quote</span>
+                  <ArrowRight className="ml-2 h-5 w-5 transform group-hover:translate-x-1 transition-transform" />
+                </Button>
+              </Link>
             </ParallaxCard>
 
             <ParallaxCard className="p-8 bg-white/5 backdrop-blur-sm border border-[#FF0006]/20 hover:border-[#FF0006]/40 transition-all duration-500">
@@ -123,13 +120,15 @@ const ServicesPage = () => {
                 Have questions about our services? Our team is here to help you
                 find the perfect solution for your business needs.
               </p>
-              <Button
-                className="group bg-transparent border border-[#FF0006] text-white hover:bg-[#FF0006]/10"
-                size="lg"
-              >
-                <Mail className="mr-2 h-5 w-5" />
-                <span>Contact Us</span>
-              </Button>
+              <Link to="/contact">
+                <Button
+                  className="group bg-transparent border border-[#FF0006] text-white hover:bg-[#FF0006]/10"
+                  size="lg"
+                >
+                  <Mail className="mr-2 h-5 w-5" />
+                  <span>Contact Us</span>
+                </Button>
+              </Link>
             </ParallaxCard>
           </div>
         </div>

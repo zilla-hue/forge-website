@@ -9,16 +9,15 @@ const HeroContent = () => {
       <div className="max-w-3xl">
         <div className="overflow-hidden">
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-slide-up">
-            <span className="block mb-2">Forging Digital</span>
+            <span className="block mb-2">Forge your</span>
             <span className="gradient-animate bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">
-              Excellence
+              Brand&apos;s Future
             </span>
           </h1>
         </div>
 
         <p className="text-xl text-white mb-8 animate-fade-in delay-300">
-          We transform ideas into powerful digital experiences that drive
-          innovation and growth.
+          Crafting bold, innovative advertising solutions that drive results
         </p>
 
         <div className="flex gap-4 animate-fade-in delay-500">
