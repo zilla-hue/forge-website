@@ -11,7 +11,7 @@ const AboutPage = () => {
               Our Story
             </h1>
             <p className="text-xl md:text-2xl text-secondary-light/90 mb-8 animate-fade-in delay-200 leading-relaxed">
-              Crafting digital excellence through innovation and creativity.
+              Pioneering advertising excellence through strategic communications and creative innovation.
             </p>
           </div>
         </div>
@@ -171,7 +171,7 @@ const teamMembers = [
     name: "Godwin Olowosagba (ARPA)",
     role: "MD/CEO",
     bio: "10+ years of experience in digital design and brand strategy.",
-    image: "/images/godwin-olowosagba.jpg",
+    image: "/images/_J5A2528 (1).jpg",
   },
   {
     name: "Dr. Fatima Zara Abubakar",
@@ -187,21 +187,27 @@ const teamMembers = [
   },
   {
     name: "David Daberechi Amah",
-    role: "Business Intelligence/Research & Analytics",
+    role: "Copywriting/Business Intelligence",
     bio: "Passionate about creating intuitive user experiences.",
     image: "/images/david-daberechi-amah.png",
   },
   {
     name: "Felix Jimmy",
-    role: "Coporate Communications/Strategy",
+    role: "Public Relations/Marketing Strategist",
     bio: "Crafting compelling narratives that engage and convert.",
     image: "/images/felix-jimmy.jpg",
   },
   {
-    name: "Charles Benjamin Adayilo",
+    name: "Charles Barnabas",
     role: "Sales/Marketing Strategy",
     bio: "Ensuring seamless execution of client projects.",
-    image: "/images/charles-benjamin-adayilo.jpg",
+    image: "/images/charles-barnabas.jpg",
+  },
+  {
+    name: "Charles Benjamin",
+    role: "Sales/Marketing Strategy",
+    bio: "Ensuring seamless execution of client projects.",
+    image: "/images/charles-benjamin.jpg",
   },
   {
     name: "Itodo Josephine Fatu",
