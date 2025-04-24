@@ -199,21 +199,27 @@ const teamMembers = [
   },
   {
     name: "Charles Barnabas",
-    role: "Sales/Marketing Strategy",
+    role: "Sales/Marketing Strategist",
     bio: "Ensuring seamless execution of client projects.",
     image: "/images/charles-barnabas.jpg",
   },
   {
     name: "Charles Benjamin",
-    role: "Sales/Marketing Strategy",
+    role: "Sales/Marketing Strategist",
     bio: "Ensuring seamless execution of client projects.",
     image: "/images/charles-benjamin.jpg",
   },
   {
     name: "Itodo Josephine Fatu",
-    role: "Sales/Marketing Strategy",
+    role: "Sales/Marketing Strategist",
     bio: "Ensuring seamless execution of client projects.",
     image: "/images/itodo-josephine-fatu.jpg",
+  },
+  {
+    name: "Uchenna Nwaokeke",
+    role: "Sales/Marketing Strategist",
+    bio: "Ensuring seamless execution of client projects.",
+    image: "/images/uchenna-nwaokeke.jpg",
   },
 ];
 

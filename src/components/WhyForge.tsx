@@ -68,9 +68,9 @@ export default function WhyForge() {
       className="relative bg-[#171717] py-32 overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#FF0006]/10 via-transparent to-transparent opacity-50" />
-      <div className="container relative mx-auto px-6">
+      <div className="container relative mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
-          <h2 className="text-6xl font-bold mb-8 bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-white via-red-200 to-white bg-clip-text text-transparent">
             The Forge Difference
           </h2>
           <p className="text-xl text-secondary-light/90 max-w-3xl mx-auto leading-relaxed">

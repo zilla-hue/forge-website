@@ -2,25 +2,46 @@ import { ParallaxCard } from "@/components/ParallaxCard";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, CheckCircle } from "lucide-react";
 import { serviceCategories } from "../components/Services/serviceData";
-import React from "react";
 import { Link } from "react-router-dom";
 
-const ServicesPage = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+// Function to map service categories to open-source Unsplash images
+const getServiceImage = (categoryTitle: string): string => {
+  const imageMap: Record<string, string> = {
+    "Outdoor Advertising": "/images/Billboard.jpg",
+    "Media Marketing": "/images/forge-art.png",
+    "Media Management":
+      "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop",
+    "Digital Marketing":
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1000&auto=format&fit=crop",
+    "Content Creation":
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1000&auto=format&fit=crop",
+    "Perception Management":
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000&auto=format&fit=crop",
+    "Personality Profiling": "/images/personality-profiling.jpg",
+    "Brand Strategy": "/images/Luxury is exotic.jpg",
+    "Public Relations":
+      "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000&auto=format&fit=crop",
+    "Merchandise":
+      "/images/forge-brand.jpg",
+    "Visual Arts":
+      "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000&auto=format&fit=crop",
+    "Video & Film Production": "/images/media-mastery.png",
+    "Radio and Tv Production":
+      "https://images.unsplash.com/photo-1598143412010-9dbc6af7983f?q=80&w=1000&auto=format&fit=crop",
+    "Publication & Printing": "/images/printing-press-machine-mass-production-action.jpg",
+    "Audio Engineering": "/images/creative-production.png",
+    "Music Production":
+      "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop",
   };
 
-  // Handle hash changes
-  React.useEffect(() => {
-    const hash = window.location.hash.slice(1);
-    if (hash) {
-      scrollToSection(hash);
-    }
-  }, []);
+  // Return the mapped image URL or a default image if category not found
+  return (
+    imageMap[categoryTitle] ||
+    "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000&auto=format&fit=crop"
+  );
+};
 
+const ServicesPage = () => {
   return (
     <main className="min-h-screen bg-secondary">
       {/* Enhanced Hero Section */}
@@ -71,9 +92,7 @@ const ServicesPage = () => {
                 <div className="lg:w-1/2">
                   <div className="rounded-2xl overflow-hidden border border-[#FF0006]/20 shadow-lg shadow-[#FF0006]/5">
                     <img
-                      src={`/images/${category.title
-                        .toLowerCase()
-                        .replace(/ /g, "-")}.png`}
+                      src={getServiceImage(category.title)}
                       alt={category.title}
                       className="w-full h-auto transform hover:scale-105 transition-transform duration-500"
                       loading="lazy"
@@ -141,26 +160,86 @@ const ServicesPage = () => {
             What Our Clients Say
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[1, 2, 3].map((_, index) => (
-              <div key={index} className="bg-white/5 p-6 rounded-lg">
-                <p className="text-secondary-light/80 mb-4">
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                  Aenean euismod bibendum laoreet."
-                </p>
-                <div className="flex items-center">
-                  <img
-                    src={`/placeholder.svg?height=50&width=50`}
-                    alt="Client"
-                    className="rounded-full mr-4 w-[50px] h-[50px]"
-                    loading="lazy"
-                  />
-                  <div>
-                    <p className="font-bold text-white">John Doe</p>
-                    <p className="text-secondary-light/60">CEO, Company Inc.</p>
-                  </div>
+            {/* Media Mastery Testimonial */}
+            <div className="bg-white/5 p-6 rounded-lg hover:bg-white/10 transition-colors duration-300">
+              <p className="text-secondary-light/80 mb-4">
+                "Forge's media marketing strategy increased our brand visibility
+                by 78% in just three months. Their digital campaign approach
+                completely transformed how we connect with our audience."
+              </p>
+              <div className="flex items-center">
+                {/* <img
+                  src="/images/godwin-olowosagba.jpg"
+                  alt="Chijioke Nnamdi"
+                  className="rounded-full mr-4 w-[50px] h-[50px] object-cover"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://via.placeholder.com/50x50";
+                  }}
+                /> */}
+                <div>
+                  <p className="font-bold text-white">Chijioke Nnamdi</p>
+                  <p className="text-secondary-light/60">
+                    Marketing Director, NexGen Tech
+                  </p>
                 </div>
               </div>
-            ))}
+            </div>
+
+            {/* Brand Strategy Testimonial */}
+            <div className="bg-white/5 p-6 rounded-lg hover:bg-white/10 transition-colors duration-300">
+              <p className="text-secondary-light/80 mb-4">
+                "The brand strategy Forge developed for us completely
+                repositioned our company in the market. Their content creation
+                team delivered messaging that resonated perfectly with our
+                target demographic."
+              </p>
+              <div className="flex items-center">
+                {/* <img
+                  src="/images/charles-barnabas.jpg"
+                  alt="Adebayo Ogunlesi"
+                  className="rounded-full mr-4 w-[50px] h-[50px] object-cover"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://via.placeholder.com/50x50";
+                  }}
+                /> */}
+                <div>
+                  <p className="font-bold text-white">Adebayo Ogunlesi</p>
+                  <p className="text-secondary-light/60">CEO, Elevate Brands</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Creative Production Testimonial */}
+            <div className="bg-white/5 p-6 rounded-lg hover:bg-white/10 transition-colors duration-300">
+              <p className="text-secondary-light/80 mb-4">
+                "The video campaign Forge produced for our product launch
+                generated over 2 million views and a 32% increase in sales.
+                Their creative team truly understands how to capture attention
+                and drive results."
+              </p>
+              <div className="flex items-center">
+                {/* <img
+                  src="/images/fatima-zara-abubakar.jpg"
+                  alt="Amina Ibrahim"
+                  className="rounded-full mr-4 w-[50px] h-[50px] object-cover"
+                  loading="lazy"
+                  onError={(e) => {
+                    const target = e.target as HTMLImageElement;
+                    target.src = "https://via.placeholder.com/50x50";
+                  }}
+                /> */}
+                <div>
+                  <p className="font-bold text-white">Amina Ibrahim</p>
+                  <p className="text-secondary-light/60">
+                    Product Director, Fusion Media
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

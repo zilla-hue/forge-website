@@ -28,12 +28,23 @@ const ProjectCard = ({
       )}
     >
       <div className="aspect-[4/3] overflow-hidden">
-        <img
-          src={image}
-          alt={title}
-          className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
-          loading="lazy"
-        />
+        {image.endsWith(".mp4") ? (
+          <video
+            src={image}
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            autoPlay
+            muted
+            loop
+            playsInline
+          />
+        ) : (
+          <img
+            src={image}
+            alt={title}
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+            loading="lazy"
+          />
+        )}
       </div>
 
       <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />

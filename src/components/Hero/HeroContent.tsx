@@ -8,10 +8,10 @@ const HeroContent = () => {
     <div className="relative container mx-auto px-6 h-full flex items-center">
       <div className="max-w-3xl">
         <div className="overflow-hidden">
-          <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 animate-slide-up">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 animate-slide-up">
             <span className="block mb-2">Forge your</span>
             <span className="gradient-animate bg-gradient-to-r from-white via-primary to-white bg-clip-text text-transparent">
-              Brand&apos;s Future
+              Brand's Future
             </span>
           </h1>
         </div>
@@ -20,7 +20,7 @@ const HeroContent = () => {
           Crafting bold, innovative advertising solutions that drive results
         </p>
 
-        <div className="flex gap-4 animate-fade-in delay-500">
+        <div className="flex flex-col md:flex-row gap-4 animate-fade-in delay-500">
           <Link to="/contact">
             <Button
               size="lg"

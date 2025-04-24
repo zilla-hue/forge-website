@@ -1,14 +1,18 @@
 /** @type {import('tailwindcss').Config} */
-import { tailwindColors } from './src/lib/theme';
+import { tailwindColors } from "./src/lib/theme";
 
 export default {
   darkMode: ["class"],
-  content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     container: {
       center: true,
       padding: "2rem",
       screens: {
+        sm: "640px",
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
         "2xl": "1400px",
       },
     },
@@ -20,7 +24,7 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Inter var', 'sans-serif'],
+        sans: ["Inter var", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
@@ -39,4 +43,4 @@ export default {
     },
   },
   plugins: [require("tailwindcss-animate")],
-}
+};
