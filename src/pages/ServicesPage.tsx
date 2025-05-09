@@ -7,7 +7,8 @@ import { Link } from "react-router-dom";
 // Function to map service categories to open-source Unsplash images
 const getServiceImage = (categoryTitle: string): string => {
   const imageMap: Record<string, string> = {
-    "Outdoor Advertising": "/images/Billboard.jpg",
+    "Out of Home Advertising": "/images/Billboard.jpg",
+    "Brand Strategy": "/images/Luxury is exotic.jpg",
     "Media Marketing": "/images/forge-art.png",
     "Media Management":
       "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1000&auto=format&fit=crop",
@@ -18,17 +19,16 @@ const getServiceImage = (categoryTitle: string): string => {
     "Perception Management":
       "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1000&auto=format&fit=crop",
     "Personality Profiling": "/images/personality-profiling.jpg",
-    "Brand Strategy": "/images/Luxury is exotic.jpg",
     "Public Relations":
       "https://images.unsplash.com/photo-1557804506-669a67965ba0?q=80&w=1000&auto=format&fit=crop",
-    "Merchandise":
-      "/images/forge-brand.jpg",
+    "Merchandise": "/images/forge-brand.jpg",
     "Visual Arts":
       "https://images.unsplash.com/photo-1513364776144-60967b0f800f?q=80&w=1000&auto=format&fit=crop",
     "Video & Film Production": "/images/media-mastery.png",
     "Radio and Tv Production":
       "https://images.unsplash.com/photo-1598143412010-9dbc6af7983f?q=80&w=1000&auto=format&fit=crop",
-    "Publication & Printing": "/images/printing-press-machine-mass-production-action.jpg",
+    "Publication & Printing":
+      "/images/printing-press-machine-mass-production-action.jpg",
     "Audio Engineering": "/images/creative-production.png",
     "Music Production":
       "https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?q=80&w=1000&auto=format&fit=crop",
