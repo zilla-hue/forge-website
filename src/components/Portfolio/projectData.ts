@@ -39,7 +39,7 @@ export const projects: Project[] = [
     title: "Brand Strategy & Perception Management",
     description:
       "Delivered a full-scale brand strategy and perception management service, including personality profiling, visual language development, and content strategy to elevate market position.",
-    image: "/images/Luxury is exotic.jpg",
+    image: "/images/Luxury_is_exotic.jpg",
     tags: ["Perception Management", "Content Creation", "Brand Strategy"],
     link: "#",
   },
