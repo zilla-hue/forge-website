@@ -30,7 +30,7 @@ interface ServiceCategory {
 export const serviceCategories: ServiceCategory[] = [
   {
     icon: Megaphone,
-    title: "Outdoor Advertising",
+    title: "Out of Home Advertising",
     services: ["Billboards", "Transit Banners", "Posters"],
     description:
       "Public space ads: billboards, transit banners, posters. Focus on high-visibility brand messaging.",

@@ -217,6 +217,14 @@ const WorkPage = () => {
 
 const projects = [
   {
+    title: "Out of Home Advertising",
+    description:
+      "Implemented a strategic outdoor advertising campaign combining traditional billboards with digital elements to maximize urban visibility and audience engagement.",
+    image: "/images/Billboard.jpg",
+    tags: ["Outdoor Advertising", "Publication & Print", "Digital Integration"],
+    link: "#",
+  },
+  {
     title: "Media Marketing Campaign",
     description:
       "Executed a comprehensive media marketing campaign integrating social media, digital platforms, and influencer partnerships to drive engagement and brand visibility.",
@@ -226,18 +234,10 @@ const projects = [
     featured: true,
   },
   {
-    title: "Outdoor Advertising Service",
-    description:
-      "Implemented a strategic outdoor advertising campaign combining traditional billboards with digital elements to maximize urban visibility and audience engagement.",
-    image: "/images/Billboard.jpg",
-    tags: ["Outdoor Advertising", "Publication & Print", "Digital Integration"],
-    link: "#",
-  },
-  {
     title: "Video & Film Production Service",
     description:
       "Produced a visually captivating advertising campaign for Leon and Grey, showcasing expertise in cinematic storytelling, creative direction, and high-impact visual content for brand elevation.",
-    image: "/assets/videos/02academy_abuja_548910028.mp4",
+    image: "/videos/02academy_abuja_548910028.mp4",
     tags: ["Video & Film", "Educational Content", "Media Production"],
     link: "#",
     featured: true,

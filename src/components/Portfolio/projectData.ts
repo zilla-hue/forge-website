@@ -30,7 +30,7 @@ export const projects: Project[] = [
     title: "Video & Film Production Service",
     description:
       "Produced a visually captivating advertising campaign for Leon and Grey, showcasing expertise in cinematic storytelling, creative direction, and high-impact visual content for brand elevation.",
-    image: "/assets/videos/02academy_abuja_548910028.mp4",
+    image: "/videos/02academy_abuja_548910028.mp4",
     tags: ["Video & Film", "Educational Content", "Media Production"],
     link: "#",
     featured: true,
